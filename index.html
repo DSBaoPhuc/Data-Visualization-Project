@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language Popularity</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Student Information</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class = "Title">
+        <h1>Popularity of Programming Languages from 2004 to 2023</h1>
+        <!-- <label for="">Popularity of Programming Languages from 2004 to 2023</label> -->
+    </div>
+    <br>
+    <div class="date-selector">
+        <label for="date">Select Date:</label>
+        <select id="select-date"></select>
+    </div>
+
+    <div id="partial-chart">
+        <div>
+            <h3>Pie Chart</h3>
+            <div id="chart-1">
+                <div id="color-list-1"></div>
+            </div>
+        </div>
+
+        <div id="chart-2">
+            <h3 style="text-align: center">Horizontal Bar Chart</h3>
+            <div style="display: flex; justify-content: center">
+                <svg class="chart-2"></svg>
+            </div>
+        </div>
+    </div>
+    <div id="chart-3">
+        <h3>Line chart</h3>
+        <div id="container">
+            <div>
+                <div id="chart"></div>
+                <div id="legend"></div>
+            </div>
+            <div id="table"></div>
+        </div>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="chart-1.js"></script>
+    <script src="chart-2.js"></script>
+    <script src="chart-3.js"></script>
+    <script src="main.js"></script>
+    
+    <h1>Group: GODs</h1>
+    
+    <h2>Student Information</h2>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+        </tr>
+        <tr>
+            <td>Tran Bao Phuc</td>
+            <td>ITDSIU21109</td>
+        </tr>
+        <tr>
+            <td>Ngo Hoang Thanh</td>
+            <td>ITDSIU21119</td>
+        </tr>
+        <tr>
+            <td>Le Xuan Tam</td>
+            <td>ITDSIU21018</td>
+        </tr>
+        <tr>
+            <td>Nguyen Huu Khang</td>
+            <td>ITDSIU21</td>
+        </tr>
+        <tr>
+            <td>Nguyen Ba Duy</td>
+            <td>ITDSIU21012</td>
+        </tr>
+    </table>
+</body>
+
+</html>
