@@ -11,7 +11,7 @@ const legendTable = d3.select("#legend").append("table");
 
 // Fetch the data from data.json
 d3.json(
-  "https://raw.githubusercontent.com/TP-O/data-visualization-project_l-ToT-l/main/data.json"
+  "https://raw.githubusercontent.com/DSBaoPhuc/Data-Visualization-Project/main/data.json"
 ).then((data) => {
   // Parse the date format
   const parseDate = d3.timeParse("%B %Y");
