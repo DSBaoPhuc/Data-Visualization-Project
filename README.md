@@ -6,9 +6,7 @@
 ## About The Project
 - The Final Project for the IU' 2024 Data Science and Data Visualization course.
 
-- 
-
-- 
+- The analysis of the popularity of programming languages from 2004 to 2023 employs data science and visualization to understand and represent trends in programming language usage. Through advanced analytics, it reveals shifts in language popularity, while data visualization transforms complex insights into accessible formats. This synergy informs decision-making for developers, educators, and businesses, fostering a collective understanding of the evolving landscape of programming languages.
 
 ## 
 ![Background](imgs/bg_img.png)
@@ -19,10 +17,10 @@
 | Student's ID |        Full Name       |
 |--------------|------------------------|
 | ITDSIU21109  |      Trần Bảo Phúc     |
-| ITCSIU21119  |      Ngô Hoàng Thành   |
-| ITCSIU21118  |      Lê Xuân Tâm       |
+| ITDSIU21119  |      Ngô Hoàng Thành   |
+| ITDSIU21118  |      Lê Xuân Tâm       |
 | ITDSIU21014  |      Nguyễn Bá Duy     |
-| ITITIU21002  |      Nguyễn Hữu Khang  |
+| ITDSIU21002  |      Nguyễn Hữu Khang  |
 
 ## Getting Started
 
