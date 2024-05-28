@@ -11,7 +11,7 @@
 - 
 
 ## 
-![Background.jpg](imgs\bg_img.png)
+![Background](imgs/bg_img.png)
 
 
 ## My Team
