@@ -11,7 +11,7 @@ const legendTable = d3.select("#legend").append("table");
 
 // Fetch the data from data.json
 d3.json(
-  "https://raw.githubusercontent.com/DSBaoPhuc/Data-Visualization-Project/main/data.json"
+  "https://raw.githubusercontent.com/DSBaoPhuc/Data-Visualization-Project/main/manage_data/data.json"
 ).then((data) => {
   // Parse the date format
   const parseDate = d3.timeParse("%B %Y");
@@ -78,7 +78,8 @@ d3.json(
     .attr("class", "axis-label")
     .attr("transform", "rotate(-90)")
     .attr("x", -(height3 / 2))
-    .attr("y", margin3.left - 10)
+    .attr("y", margin3.left - 40) // Move the label further left
+    .attr("text-anchor", "middle") // Center align the text
     .text("Rating");
 
   svg
