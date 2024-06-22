@@ -7,39 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Language Popularity</title>
     <link rel="stylesheet" href="style.css" />
-
     <title>Student Information</title>
     <style>
         table {
             width: 100%;
             border-collapse: collapse;
         }
-    
+
         th,
         td {
             border: 1px solid #dddddd;
             text-align: center;
             padding: 8px;
         }
-    
+
         th {
             background-color: #f2f2f2;
         }
-    </style>
 
+        .chart-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class = "Title">
+    <div class="Title">
         <h1>Popularity of Programming Languages from 2004 to 2023</h1>
-        <!-- <label for="">Popularity of Programming Languages from 2004 to 2023</label> -->
     </div>
     <br>
     <div class="date-selector">
         <label for="date">Select Date:</label>
         <select id="select-date"></select>
     </div>
-
     <div id="partial-chart">
         <div>
             <h3>Pie Chart</h3>
@@ -47,7 +66,6 @@
                 <div id="color-list-1"></div>
             </div>
         </div>
-
         <div id="chart-2">
             <h3 style="text-align: center">Horizontal Bar Chart</h3>
             <div style="display: flex; justify-content: center">
@@ -56,7 +74,7 @@
         </div>
     </div>
     <div id="chart-3">
-        <h3>Line chart</h3>
+        <div class="chart-title">Line Chart</div>
         <div id="container">
             <div>
                 <div id="chart"></div>
@@ -64,21 +82,16 @@
             </div>
             <div id="table"></div>
         </div>
-
     </div>
-
+    <!-- Tooltip div -->
+    <div class="tooltip" id="tooltip"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- <script src="chart-1.js"></script> -->
-    <script src="manage_chart\chart-1.js"></script>
-    
-    <script src="manage_chart\chart-2.js"></script>
-    <script src="manage_chart\chart-3.js"></script>
+    <script src="manage_chart/chart-1.js"></script>
+    <script src="manage_chart/chart-2.js"></script>
+    <script src="manage_chart/chart-3.js"></script>
     <script src="main.js"></script>
-    
     <h1>Group: GODs</h1>
-    
     <h2>Student Information:</h2>
-    
     <table>
         <tr>
             <th>Name</th>
@@ -102,7 +115,7 @@
         </tr>
         <tr>
             <td>Nguyen Huu Khang</td>
-            <td>ITDSIU21</td>
+            <td>ITDSIU21002</td>
             <td>Team Member</td>
         </tr>
         <tr>

@@ -9,6 +9,9 @@ const table = d3.select("#table").append("table");
 // Create the table below the chart for the legend
 const legendTable = d3.select("#legend").append("table");
 
+// Create the tooltip div
+const tooltip = d3.select("#tooltip");
+
 // Fetch the data from data.json
 d3.json(
   "https://raw.githubusercontent.com/DSBaoPhuc/Data-Visualization-Project/main/manage_data/data.json"
@@ -105,7 +108,7 @@ d3.json(
     .data(programmingLanguages)
     .enter()
     .append("tr")
-    .on("click", function (d) {
+    .on("click", function (event, d) {
       const selectedLanguage = d3.select(this).datum();
       const isSelected = d3.select(this).classed("selected");
 
@@ -131,14 +134,36 @@ d3.json(
           Rating: d[language],
         }));
 
-        svg
+        const path = svg
           .append("path")
           .datum(filteredData)
           .attr("class", "line")
           .attr("d", lineGenerator)
           .attr("fill", "none")
           .attr("stroke", getColor(i))
-          .attr("stroke-width", 2);
+          .attr("stroke-width", 2)
+          .on("mouseover", function (event, d) {
+            // Show the tooltip
+            tooltip.style("display", "block");
+          })
+          .on("mousemove", function (event, d) {
+            // Update the tooltip content and position
+            const [x, y] = d3.pointer(event);
+            const date = xScale.invert(x);
+            const rating = yScale.invert(y);
+            tooltip
+              .html(
+                `Language: ${language}<br>Date: ${d3.timeFormat("%B %Y")(
+                  date
+                )}<br>Rating: ${rating.toFixed(2)}`
+              )
+              .style("left", `${event.pageX + 10}px`)
+              .style("top", `${event.pageY + 10}px`);
+          })
+          .on("mouseout", function () {
+            // Hide the tooltip
+            tooltip.style("display", "none");
+          });
       });
 
       // Update the legend table
@@ -194,7 +219,6 @@ d3.json(
     legendRows.append("td").text((d) => d);
   }
 });
-
 const randomRgbColor = () => {
   let r = Math.floor(Math.random() * 256); // Random between 0-255
   let g = Math.floor(Math.random() * 256); // Random between 0-255
